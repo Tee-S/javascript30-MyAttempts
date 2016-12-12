@@ -1,21 +1,38 @@
 //Register keylistener
-document.addEventListener('keydown', function(event){
-    if (event.keyCode != undefined) handleKey((event.keyCode));
-});
+document.addEventListener('keydown', handleKey);
 
-function handleKey(keyCode){
-    document.getElementById("debug").innerHTML = keyCode;
+//Register transition event handlers
+var buttons = document.getElementsByClassName("button");
+for(var i = 0; i < buttons.length; i++){
+    buttons[i].addEventListener("transitionend", function () {
+        this.classList.remove("playing");
+    })
+}
 
-    switch (keyCode){
-        case 65: sound_clap.play(); break;      //A
-        case 83: sound_hihat.play(); break;     //S
-        case 68: sound_kick.play(); break;      //D
-        case 70: sound_openhat.play(); break;   //F
-        case 71: sound_boom.play(); break;      //G
-        case 72: sound_ride.play(); break;      //H
-        case 74: sound_snare.play(); break;     //J
-        case 75: sound_tom.play(); break;       //K
-        case 76: sound_tink.play(); break;      //L
+function handleKey(event){
+        startTransition(event.keyCode);
+        switch (event.keyCode){
+            case 65: playAudio(sound_clap); break;      //A
+            case 83: playAudio(sound_hihat); break;     //S
+            case 68: playAudio(sound_kick); break;      //D
+            case 70: playAudio(sound_openhat); break;   //F
+            case 71: playAudio(sound_boom); break;      //G
+            case 72: playAudio(sound_ride); break;      //H
+            case 74: playAudio(sound_snare); break;     //J
+            case 75: playAudio(sound_tom); break;       //K
+            case 76: playAudio(sound_tink); break;      //L
+        }
+}
+
+function playAudio(audioFile) {
+    audioFile.currentTime = 0;
+    audioFile.play();
+}
+
+function startTransition(keyCode){
+    var button = document.getElementById(keyCode);
+    if (button != null) {
+        button.classList.add("playing");
     }
 }
 

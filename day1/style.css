@@ -1,13 +1,17 @@
 body{
-    /*
     background-image: url("http://i.imgur.com/b9r5sEL.jpg");
-    */
 }
 
 #buttonContainer{
     margin: auto;
     width: 90%;
     text-align: center;
+
+    align-items: center;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    min-height: 98vh;
 }
 
 .button{
@@ -21,6 +25,12 @@ body{
     border-style: solid;
     border-color: black;
     background: rgba(50,50,50,0.8);
+    transition:all 0.1s;
+}
+
+.playing{
+    border-color: gold;
+    transform:scale(1.2);
 }
 
 .soundInfo{
