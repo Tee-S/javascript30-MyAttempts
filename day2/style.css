@@ -31,6 +31,7 @@ body{
     left: 117px;
     transform-origin: 50% 96%;
     transform: rotate(0deg);
+    transition-timing-function: cubic-bezier(0.02, 2.59, 0.58, 1);
 }
 
 #minuteHand{
@@ -44,6 +45,7 @@ body{
     left: 120px;
     transform-origin: 50% 96%;
     transform: rotate(45deg);
+    transition-timing-function: cubic-bezier(0.02, 2.59, 0.58, 1);
 }
 
 #secondHand{
@@ -57,4 +59,5 @@ body{
     left: 125px;
     transform-origin: 50% 96%;
     transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.02, 2.59, 0.58, 1);
 }
