@@ -1,0 +1,8 @@
+1. For question 5, why get the link's text from link.textContent. the same text
+cant be found in:
+	innerHTML
+	innerText
+	outerText
+	text
+	textContent
+	title
