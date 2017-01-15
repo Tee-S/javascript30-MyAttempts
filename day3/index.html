@@ -6,15 +6,15 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Update CSS Variables is JS</h1>
+    <h1>Update CSS Variables is <span class='coloredText'>JS</span></h1>
 
-    <div>
+    <div class="controls">
         Spacing:
-        <input type="range" min="10" max="200" value="10" data-sizing="px">
+        <input type="range" min="10" max="200" value="10" data-sizing="px" name="spacing">
         Blur:
-        <input type="range" min="10" max="200" value="10" data-sizing="px">
-        Border Colour:
-        <input type="color" value="#ffc800">
+        <input type="range" min="0" max="200" value="0" data-sizing="px" name="blur">
+        Padding Color:
+        <input type="color" value="#ffc800" name="paddingColor">
     </div>
     <img src="https://source.unsplash.com/7bwQXzbF6KE/400x250">
     <script src="script.js"></script>

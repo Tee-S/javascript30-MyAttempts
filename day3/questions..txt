@@ -8,3 +8,9 @@ all the other ones;
 }
 
 why is this?
+
+2. document.querySelectorAll('.controls input')
+this selects all child 'input' elemets in .controls class elements?
+
+3. Fully understand:
+document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
