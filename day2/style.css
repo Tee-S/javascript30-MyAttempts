@@ -11,6 +11,45 @@ body{
     border-width: 15px;
 }
 
+#hourHand, #minuteHand, #secondHand{
+/*#clockface > div {*/
+    background-color: white;
+    transition: all 0.2s;
+
+    position: absolute;
+    transform-origin: 50% 96%;
+}
+
+#hourHand{
+    width: 10px;
+    height: 70px;
+    
+    top: 55px;
+    left: 117px;
+
+    transform: rotate(0deg);
+}
+
+#minuteHand{
+    width: 7px;
+    height: 100px;
+    
+    top: 25px;
+    left: 120px;
+    transform: rotate(45deg);
+    transition-timing-function: cubic-bezier(0.02, 2.59, 0.58, 1);
+}
+
+#secondHand{
+    width: 2px;
+    height: 90px;
+
+    top: 35px;
+    left: 125px;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.02, 2.59, 0.58, 1);
+}
+
 .testLines{
     background-color: black;
     width: 175%;
@@ -18,46 +57,5 @@ body{
 
     position: relative;
     transform-origin: 0% 50%;
-}
-
-#hourHand{
-    background-color: white;
-    transition: all 0.2s;
-    width: 10px;
-    height: 70px;
-
-    position: absolute;
-    top: 55px;
-    left: 117px;
-    transform-origin: 50% 96%;
-    transform: rotate(0deg);
-    transition-timing-function: cubic-bezier(0.02, 2.59, 0.58, 1);
-}
-
-#minuteHand{
-    background-color: white;
-    transition: all 0.2s;
-    width: 7px;
-    height: 100px;
-
-    position: absolute;
-    top: 25px;
-    left: 120px;
-    transform-origin: 50% 96%;
-    transform: rotate(45deg);
-    transition-timing-function: cubic-bezier(0.02, 2.59, 0.58, 1);
-}
-
-#secondHand{
-    background-color: white;
-    transition: all 0.2s;
-    width: 2px;
-    height: 90px;
-
-    position: absolute;
-    top: 35px;
-    left: 125px;
-    transform-origin: 50% 96%;
-    transform: rotate(90deg);
     transition-timing-function: cubic-bezier(0.02, 2.59, 0.58, 1);
 }

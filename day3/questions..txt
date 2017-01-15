@@ -1,0 +1,10 @@
+1. in the actaul solution, he has two body selectors(proper name for it?) in CSS style:
+body{
+text-alight: center;
+}
+
+body{
+all the other ones;
+}
+
+why is this?
